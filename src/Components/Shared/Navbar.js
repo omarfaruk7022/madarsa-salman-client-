@@ -41,15 +41,27 @@ const Navbar = () => {
             <div class="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
               <Link
                 to="/"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-sm "
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px] "
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-sm "
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 About
+              </Link>
+              <Link
+                to="/blog"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+              >
+                Blog
+              </Link>
+              <Link
+                to="/dashboard"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+              >
+                Dashboard
               </Link>
 
               
@@ -58,13 +70,13 @@ const Navbar = () => {
               {user ? (
                   <button
                     onClick={handleSignOut}
-                    className="block h-16 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[16px] "
+                    className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[13px] "
                   >
                     Logout
                   </button>
                 ) : (
                   <Link to="/login">
-                    <button className="block h-16 leading-[3rem] text-sm border-b-4 border-transparent hover:text-primary hover:border-current ">
+                    <button className="block h-16 leading-[4rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current ">
                       Login/Register
                     </button>
                   </Link>
