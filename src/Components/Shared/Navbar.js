@@ -68,13 +68,11 @@ const Navbar = () => {
               </Link>
                 </li>
 
-                <li className="text-black">
-                  {user && <Link to="dashboard">Dashboard</Link>}
-                </li>
+                
                 <li>
                   {user ? (
                     <button onClick={signOut} className="btn btn-ghost">
-                      Sign Out
+                      Logout
                     </button>
                   ) : (
                     <Link className="block h-16 leading-[4rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current " to="/login">Login</Link>
