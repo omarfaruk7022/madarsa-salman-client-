@@ -6,7 +6,7 @@ const Banner = () => {
       <section class="relative bg-white">
         <img
           class="absolute inset-0 object-[75%] sm:object-[25%] object-cover w-full h-full opacity-25 sm:opacity-100"
-          src="https://images.unsplash.com/photo-1601758003122-53c40e686a19"
+          src="https://i.ibb.co/TmWgf6y/library-488690-1920.jpg"
           alt="Couple on a bed with a dog"
         />
 
@@ -16,7 +16,7 @@ const Banner = () => {
           <div class="max-w-xl text-center sm:text-left">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
               Let us find your
-              <strong class="font-extrabold text-rose-700 sm:block">
+              <strong class="font-extrabold text-primary sm:block">
                 Forever Home.
               </strong>
             </h1>
@@ -28,14 +28,14 @@ const Banner = () => {
 
             <div class="flex flex-wrap mt-8 text-center gap-4">
               <a
-                class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-rose-600 sm:w-auto active:bg-rose-500 hover:bg-rose-700 focus:outline-none focus:ring"
+                class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-primary sm:w-auto active:bg-primary hover:bg-primary focus:outline-none focus:ring"
                 href="/get-started"
               >
                 Get Started
               </a>
 
               <a
-                class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-rose-600 sm:w-auto hover:text-rose-700 active:text-rose-500 focus:outline-none focus:ring"
+                class="block w-full px-12 py-3 text-sm font-medium bg-white rounded shadow text-primary sm:w-auto hover:text-primary active:text-primary focus:outline-none focus:ring"
                 href="/about"
               >
                 Learn More

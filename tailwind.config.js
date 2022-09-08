@@ -5,8 +5,8 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
+          primary: "#59CE8F",
+          secondary: "#0096FF",
           accent: "#37cdbe",
           neutral: "#3d4451",
           "base-100": "#ffffff",
@@ -15,5 +15,5 @@ module.exports = {
       
     ],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"),require('@tailwindcss/forms')],
 };

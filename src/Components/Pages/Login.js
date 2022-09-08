@@ -3,17 +3,19 @@ import swal from "sweetalert";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 
-import Navbar from "../Shared/Navbar";
-import Footer from "../Shared/Footer";
+
 import auth from "../../firebase.init";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Login = () => {
-  // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+ 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-  // const [signInWithGithub, gitUser, gitLoading, gitError] = useSignInWithGithub(auth);
-  // const [signInWithFacebook, fbUser, fbLoading, fbError] = useSignInWithFacebook(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+ 
 
   let signInError;
 
@@ -22,7 +24,11 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-
+  useEffect( () =>{
+    if (user) {
+        navigate(from, { replace: true });
+    }
+}, [user, from, navigate])
   // if (googleLoading || loading || gitLoading || fbLoading) {
   //   return <Loader></Loader>
   // }
@@ -48,13 +54,13 @@ const Login = () => {
         </div>
         <div className="card w-96 bg-base-100 shadow-xl mx-3 lg:mx-0">
           <div className="card-body">
-            <h2 className="text-center text-2xl font-bold text-secondary">
+            <h2 className="text-center text-2xl font-bold text-primary">
               Login
             </h2>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text text-secondary">Email </span>
+                  <span className="label-text text-primary">Email </span>
                 </label>
                 <input
                   type="email"
@@ -86,7 +92,7 @@ const Login = () => {
               </div>
               <div className="form-control w-full max-w-xs">
                 <label className="label">
-                  <span className="label-text text-secondary">Password </span>
+                  <span className="label-text text-primary">Password </span>
                 </label>
                 <input
                   type="password"
@@ -120,7 +126,7 @@ const Login = () => {
               {signInError}
 
               <input
-                className="btn btn-outline w-full max-w-xs hover:bg-secondary border-secondary hover:border-secondary"
+                className="btn btn-outline w-full max-w-xs hover:bg-primary border-primary hover:border-primary"
                 type="submit"
                 value="Login"
               />

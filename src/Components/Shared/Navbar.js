@@ -1,7 +1,14 @@
+import { signOut } from "firebase/auth";
 import React from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+  const handleSignOut = () => {
+    signOut(auth);
+  };
   return (
     <div>
       <header class="border-b border-gray-100">
@@ -24,28 +31,44 @@ const Navbar = () => {
               </svg>
             </button>
 
-            <a href="" class="flex">
-              <span class="inline-block w-32 h-10 bg-gray-200 rounded-lg"></span>
-            </a>
+            {/* <a href="" class="flex">
+              <span class="inline-block w-32 h-10 bg-gray-200 rounded-lg">Madrasa Salman</span>
+            </a> */}
+            <h1 className="text-xl font-bold">Madrasa Salman</h1>
           </div>
 
           <div class="flex items-center justify-end flex-1">
             <div class="hidden lg:uppercase lg:text-gray-500 lg:tracking-wide lg:font-bold lg:text-xs lg:space-x-4 lg:flex">
               <Link
+                to="/"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-sm "
+              >
+                Home
+              </Link>
+              <Link
                 to="/about"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
+                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-sm "
               >
                 About
               </Link>
 
               
             
-              <Link 
-              to="/login"
-              class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-red-700 hover:border-current"
-              >
-              Login
-              </Link>
+             
+              {user ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="block h-16 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[16px] "
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login">
+                    <button className="block h-16 leading-[3rem] text-sm border-b-4 border-transparent hover:text-primary hover:border-current ">
+                      Login/Register
+                    </button>
+                  </Link>
+                )}
             
             </div>
 
