@@ -137,7 +137,7 @@ const Footer = () => {
     <div class="pt-8 mt-12 border-t border-white/10">
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <p class="text-xs text-center text-gray-400 lg:text-left">
-          Copyright &copy; 2022. Company Name. All rights reserved.
+          Copyright &copy; 2022. Madrasa salman All rights reserved.
         </p>
 
         <nav class="flex justify-center text-xs text-gray-400 space-x-4 lg:justify-end">

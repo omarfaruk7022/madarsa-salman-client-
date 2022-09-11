@@ -38,7 +38,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/"
-                    class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px] "
+                    class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px] "
                   >
                     Home
                   </Link>
@@ -46,7 +46,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/about"
-                    class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                    class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
                   >
                     About
                   </Link>
@@ -54,7 +54,7 @@ const Navbar = () => {
                 <li >
                 <Link
                 to="/blog"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 Blog
               </Link>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <li>
                 <Link
                 to="/dashboard"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 Dashboard
               </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
                       Logout
                     </button>
                   ) : (
-                    <Link className="block h-16 leading-[4rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current " to="/login">Login</Link>
+                    <Link className="block h-12 leading-[3rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current " to="/login">Login</Link>
                   )}
                 </li>
               </>
@@ -89,21 +89,21 @@ const Navbar = () => {
             <>
               <Link
                 to="/"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px] "
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px] "
               >
                 Home
               </Link>
 
               <Link
                 to="/about"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 About
               </Link>
               
               <Link
                 to="/blog"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 Blog
               </Link>
@@ -111,7 +111,7 @@ const Navbar = () => {
               
               <Link
                 to="/dashboard"
-                class="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
+                class="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[12px]"
               >
                 Dashboard
               </Link>
@@ -121,13 +121,13 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handleSignOut}
-                  className="block h-16 leading-[4rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[13px] "
+                  className="block h-12 leading-[3rem] border-b-4 border-transparent hover:text-primary hover:border-current text-[13px] "
                 >
                   Logout
                 </button>
               ) : (
                 <Link to="/login">
-                  <button className="block h-16 leading-[4rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current ">
+                  <button className="block h-12 leading-[3rem] text-[13px] border-b-4 border-transparent hover:text-primary hover:border-current ">
                     Login/Register
                   </button>
                 </Link>
