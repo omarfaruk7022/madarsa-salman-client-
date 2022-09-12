@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Loading from "./Loading";
 
 const Login = () => {
  
@@ -32,7 +33,9 @@ const Login = () => {
   // if (googleLoading || loading || gitLoading || fbLoading) {
   //   return <Loader></Loader>
   // }
-
+if(loading){
+  return <Loading/>
+}
   if (user) {
     // Router.push('/');
 

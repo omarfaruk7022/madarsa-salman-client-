@@ -10,6 +10,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import swal from "sweetalert";
 import { useEffect } from "react";
+import Loading from "./Loading";
 
 const Signup = () => {
   // const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -33,6 +34,9 @@ const Signup = () => {
         navigate(from, { replace: true });
     }
 }, [user, from, navigate])
+if(loading){
+  return <Loading/>
+}
   // if (user || googleUser) {
   //   swal("Yayy", "Sign Up  Successfully Completed ", "success");
   // }

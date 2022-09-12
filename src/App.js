@@ -41,6 +41,7 @@ function App() {
           }
         >
           <Route index element={<MyProfile />} />
+          {/* <Route path="profile/:email" element={<MyProfile/>} /> */}
           <Route path="review" element={<MyReview></MyReview>} />
         </Route>
       </Routes>
