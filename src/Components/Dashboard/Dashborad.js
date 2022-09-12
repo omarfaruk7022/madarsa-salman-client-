@@ -28,7 +28,7 @@ console.log(profileInfo)
             for="my-drawer-2"
             className="btn btn-primary drawer-button lg:hidden"
           >
-            Open drawer
+            Open Menu
           </label>
         </div>
 
@@ -116,7 +116,7 @@ console.log(profileInfo)
                 className="border-b-4 border-transparent hover:text-primary hover:border-current text-[15px] "
               >
                 {" "}
-                Profile
+                Profile Info
               </Link>
             </li>
 
@@ -126,6 +126,14 @@ console.log(profileInfo)
                 className="border-b-4 border-transparent hover:text-primary hover:border-current text-[15px] "
               >
                 My Review
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/dashboard/addReview"
+                className="border-b-4 border-transparent hover:text-primary hover:border-current text-[15px] "
+              >
+                Add Review
               </Link>
             </li>
           </ul>
